@@ -1,5 +1,4 @@
 package stringsLists.controller;
-import stringsLists.controller.*;
 import stringsLists.model.*;
 import stringsLists.view.*;
 

@@ -3,12 +3,11 @@ package stringsLists.model;
 public class Kahoot {
 	
 	private int questionCount;
-	private int level;
 	private String creator;
-	private boolean isJumble;
-	private static long IDAccumulator = 0;
-	private long ID;
 	private String topic;
+	private long ID;
+	
+	private static long IDAccumulator = 0;
 	
 	public Kahoot(String topic, String creator, int questionCount){
 		this.creator = creator;
