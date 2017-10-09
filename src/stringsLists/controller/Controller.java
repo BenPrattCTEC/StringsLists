@@ -22,12 +22,12 @@ public class Controller {
 		kahoots.add(new Kahoot("English", "Tom", 34));
 		
 		// create new kahoot
-//		 interactiveCreateKahoot();
+		// interactiveCreateKahoot();
 		
 		// remove a kahoot by ID
 		try {
-				String questionBuffer = gui.displayQuestion(kahootListToString() + "\nEnter the ID of the kahoot to remove");
-			if (!removeKahoot(Integer.parseInt(questionBuffer==null? "-1": questionBuffer)))
+			String questionBuffer = gui.displayQuestion(kahootListToString() + "\nEnter the ID of the kahoot to remove");
+			if (!removeKahoot(Integer.parseInt(questionBuffer == null ? "-1" : questionBuffer)))
 				gui.displayText("Nothing was removed");
 		}
 		catch (Exception e) {
@@ -39,6 +39,9 @@ public class Controller {
 		gui.displayText(kahootListToString());
 		
 	}
+	
+	// **-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-**
+	
 	
 	private String kahootListToString() {
 		String buffer = "";
@@ -72,7 +75,7 @@ public class Controller {
 				gui.displayText("Invalid number");
 			}
 		}
-		kahoots.add(new Kahoot(topic==null? "":topic, creator==null? "":creator, numOfQuestions));
+		kahoots.add(new Kahoot(topic == null ? "" : topic, creator == null ? "" : creator, numOfQuestions));
 	}
 	
 	private int findIndexByID(int ID) {
@@ -82,6 +85,14 @@ public class Controller {
 			}
 		}
 		return -1;
+	}
+	
+	public GuiController getPopup() {
+		return gui;
+	}
+	
+	public ArrayList<Kahoot> getMyKahoots() {
+		return (ArrayList<Kahoot>) kahoots;
 	}
 	
 }
