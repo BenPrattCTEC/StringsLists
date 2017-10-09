@@ -5,9 +5,9 @@ public class Kahoot {
 	private int questionCount;
 	private String creator;
 	private String topic;
-	private long ID;
+	private int ID;
 	
-	private static long IDAccumulator = 0;
+	private static int IDAccumulator = 0;
 	
 	public Kahoot(String topic, String creator, int questionCount){
 		this.creator = creator;
@@ -23,7 +23,7 @@ public class Kahoot {
 	public int getQuestionCount(){
 		return questionCount;
 	}
-	public long getID(){
+	public int getID(){
 		return ID;
 	}
 	public String getTopic(){
