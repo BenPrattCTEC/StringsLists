@@ -15,18 +15,19 @@ public class Controller {
 	public void start() {
 		
 		kahoots = new ArrayList<Kahoot>();
-			
+		
 		// Kahoot(String topic, String creator, int questionCount)
 		kahoots.add(new Kahoot("Math", "Ben", 10));
 		kahoots.add(new Kahoot("History", "Chris", 10));
 		kahoots.add(new Kahoot("English", "Tom", 34));
 		
 		// create new kahoot
-		interactiveCreateKahoot();
+//		 interactiveCreateKahoot();
 		
 		// remove a kahoot by ID
 		try {
-			if (!removeKahoot(Integer.parseInt(gui.displayQuestion(kahootListToString() + "\nEnter the ID of the kahoot to remove"))))
+				String questionBuffer = gui.displayQuestion(kahootListToString() + "\nEnter the ID of the kahoot to remove");
+			if (!removeKahoot(Integer.parseInt(questionBuffer==null? "-1": questionBuffer)))
 				gui.displayText("Nothing was removed");
 		}
 		catch (Exception e) {
