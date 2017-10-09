@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Controller {
 	
-	GuiController gui = new GuiController();
+	Popup gui = new Popup();
 	
 	ArrayList<Kahoot> kahoots;
 	
@@ -87,7 +87,7 @@ public class Controller {
 		return -1;
 	}
 	
-	public GuiController getPopup() {
+	public Popup getPopup() {
 		return gui;
 	}
 	
